@@ -1,0 +1,126 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Nunito', system-ui, sans-serif;
+  background: linear-gradient(to bottom, #4A3B6B, #7C5A82, #C98A7D);
+  overflow: hidden;
+}
+
+.dim-overlay {
+  position: absolute;
+  inset: 0;
+  background: #0A0614;
+  pointer-events: none;
+  transition: opacity 1s ease;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  color: #F5EDE4;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 24px;
+}
+
+.duration-picker {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.duration-btn {
+  padding: 8px 18px;
+  border: 1.5px solid rgba(245, 237, 228, 0.4);
+  border-radius: 20px;
+  background: transparent;
+  color: #F5EDE4;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.duration-btn.active {
+  background: rgba(245, 237, 228, 0.2);
+  border-color: #F5EDE4;
+}
+
+.duration-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.ring-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.progress-ring-fill {
+  transition: stroke-dashoffset 1s linear;
+}
+
+.time-display {
+  position: absolute;
+  font-family: 'Fraunces', serif;
+  font-size: 36px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.finished-message {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+}
+
+.action-btn {
+  padding: 12px 32px;
+  border: none;
+  border-radius: 24px;
+  background: #F5EDE4;
+  color: #4A3B6B;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.action-btn:hover {
+  background: #FFFFFF;
+}
+
+.reset-btn {
+  padding: 12px 24px;
+  border: 1.5px solid rgba(245, 237, 228, 0.4);
+  border-radius: 24px;
+  background: transparent;
+  color: #F5EDE4;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  border-color: #F5EDE4;
+}
